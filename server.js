@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const fighters = require("./model/Test");
 
 dotenv.config();
 
@@ -20,4 +21,15 @@ mongoose
 
 app.listen(PORT, () => {
 	console.log(`app listening on port: ${PORT}`);
+});
+
+app.get("/", function (req, res) {
+	console.log(fighters);
+	fighters.find({}, function (err, result) {
+		if (err) {
+			res.send(err);
+		} else {
+			res.send(result);
+		}
+	});
 });

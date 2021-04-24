@@ -1,13 +1,16 @@
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Fighters from "./components/Fighters";
-import Fighters from "./components/Weapons";
+import Weapons from "./components/Weapons";
 
 function App() {
 	return (
-		<Router>
-			<Fighters />
-			<Weapons />
-		</Router>
+		<div>
+			<Router>
+				<Fighters />
+				<Weapons />
+			</Router>
+		</div>
 	);
 }
 
