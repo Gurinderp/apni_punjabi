@@ -1,7 +1,14 @@
 import "./App.css";
+import Fighters from "./components/Fighters";
+import Fighters from "./components/Weapons";
 
 function App() {
-	return <div className="App"></div>;
+	return (
+		<Router>
+			<Fighters />
+			<Weapons />
+		</Router>
+	);
 }
 
 export default App;
